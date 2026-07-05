@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>❤️ For Khánh Huyền ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(-45deg,#ff4d6d,#ff80ab,#9c6bff,#5c7cfa);
+    background-size:400% 400%;
+    animation:bg 12s infinite alternate;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+h1{
+    position:absolute;
+    width:100%;
+    top:40%;
+    text-align:center;
+    color:white;
+    font-size:55px;
+    text-shadow:0 0 20px white;
+    animation:zoom 2s infinite alternate;
+    z-index:1000;
+}
+
+@keyframes zoom{
+    from{transform:scale(1);}
+    to{transform:scale(1.08);}
+}
+
+.text{
+    position:absolute;
+    color:white;
+    font-weight:bold;
+    opacity:.8;
+    animation:fly linear infinite;
+    text-shadow:0 0 10px pink;
+    white-space:nowrap;
+}
+
+@keyframes fly{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+.heart{
+    position:absolute;
+    color:#ff1744;
+    animation:heartFall linear infinite;
+}
+
+@keyframes heartFall{
+    from{
+        transform:translateY(-10vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>❤️ Anh iu em Khánh Huyền ❤️</h1>
+
+<script>
+
+// Tạo nhiều dòng chữ
+for(let i=0;i<120;i++){
+
+    let t=document.createElement("div");
+    t.className="text";
+    t.innerHTML="💖 Anh iu em Khánh Huyền 💖";
+
+    t.style.left=Math.random()*100+"vw";
+    t.style.fontSize=(15+Math.random()*25)+"px";
+    t.style.animationDuration=(6+Math.random()*10)+"s";
+    t.style.animationDelay=Math.random()*10+"s";
+
+    document.body.appendChild(t);
+}
+
+// Tạo tim rơi
+for(let i=0;i<200;i++){
+
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(12+Math.random()*35)+"px";
+    h.style.animationDuration=(3+Math.random()*8)+"s";
+    h.style.animationDelay=Math.random()*10+"s";
+
+    document.body.appendChild(h);
+}
+
+</script>
+
+</body>
+</html>
